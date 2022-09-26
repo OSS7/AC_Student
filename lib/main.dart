@@ -41,8 +41,8 @@ import 'providers/marks.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  const keyApplicationId = 'mx3Hp8DyzpdnNm5BLhEcpu2FMj9iW2IxlkzucYFq';
-  const keyClientKey = 'd9wf7o89SxKJnu5vBOLQBrK6fCWBEDytK9PUOhEE';
+  const keyApplicationId = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+  const keyClientKey = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
   const keyParseServerUrl = 'https://parseapi.back4app.com';
 
   await Parse().initialize(keyApplicationId, keyParseServerUrl,
