@@ -1,18 +1,18 @@
 import 'package:ac_students/core/constant/constant.dart';
-import 'package:ac_students/core/providers/language_provider.dart';
-import 'package:ac_students/core/widgets/app_bar.dart';
+import 'package:ac_students/core/utils/providers/language_provider.dart';
+import 'package:ac_students/core/utils/widgets/app_bar.dart';
 import 'package:ac_students/features/auth/providers/user_provider.dart';
 import 'package:ac_students/features/drawer/drawer.dart';
 import 'package:ac_students/features/home/widgets/home_files_widget.dart';
 import 'package:ac_students/features/home/widgets/home_header.dart';
 import 'package:ac_students/features/home/widgets/home_news_widget.dart';
 import 'package:ac_students/features/home/widgets/home_subjects_widget.dart';
-import 'package:ac_students/features/user/file/providers/files_provider.dart';
-import 'package:ac_students/features/user/images/image/providers/images_provider.dart';
-import 'package:ac_students/features/user/mark/providers/marks_provider.dart';
-import 'package:ac_students/features/user/news/providers/news_provider.dart';
-import 'package:ac_students/features/user/report/providers/reports_provider.dart';
-import 'package:ac_students/features/user/subject/subjects/providers/subjects_provider.dart';
+import 'package:ac_students/features/student/file/providers/files_provider.dart';
+import 'package:ac_students/features/student/images/image/providers/images_provider.dart';
+import 'package:ac_students/features/student/mark/providers/marks_provider.dart';
+import 'package:ac_students/features/student/news/providers/news_provider.dart';
+import 'package:ac_students/features/student/report/providers/reports_provider.dart';
+import 'package:ac_students/features/student/subject/subjects/providers/subjects_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -48,8 +48,8 @@ class _HomeScreenState extends State<HomeScreen>
     final filesProvider = Provider.of<FilesProvider>(context, listen: false);
     final marksProvider = Provider.of<MarksProvider>(context, listen: false);
     final lan = Provider.of<LanguageProvider>(context, listen: false);
-    final imagesProvider = Provider.of<ImagesProvider>(context, listen: true);
-    final reportProvider = Provider.of<ReportsProvider>(context, listen: true);
+    final imagesProvider = Provider.of<ImagesProvider>(context);
+    final reportProvider = Provider.of<ReportsProvider>(context);
     final usr = Provider.of<UserProvider>(context, listen: false);
 
     return SafeArea(

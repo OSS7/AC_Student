@@ -1,8 +1,8 @@
 import 'package:ac_students/core/constant/constant.dart';
-import 'package:ac_students/core/providers/language_provider.dart';
-import 'package:ac_students/core/widgets/loading_circle.dart';
-import 'package:ac_students/features/user/news/providers/news_provider.dart';
-import 'package:ac_students/features/user/news/widgets/news_item.dart';
+import 'package:ac_students/core/utils/providers/language_provider.dart';
+import 'package:ac_students/core/utils/widgets/loading_circle.dart';
+import 'package:ac_students/features/student/news/providers/news_provider.dart';
+import 'package:ac_students/features/student/news/widgets/news_item.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -13,7 +13,7 @@ class HomeNewsWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     final lan = Provider.of<LanguageProvider>(context);
-    final newsProvider = Provider.of<NewsesProvider>(context, listen: true);
+    final newsProvider = Provider.of<NewsesProvider>(context);
 
     return newsProvider.news.isEmpty
         ? const SizedBox()

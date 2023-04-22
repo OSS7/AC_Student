@@ -1,8 +1,9 @@
 import 'package:ac_students/core/constant/constant.dart';
-import 'package:ac_students/core/providers/language_provider.dart';
-import 'package:ac_students/core/widgets/auth_button.dart';
-import 'package:ac_students/core/widgets/custom_logo.dart';
-import 'package:ac_students/core/widgets/custom_text_fields.dart';
+import 'package:ac_students/core/utils/providers/language_provider.dart';
+import 'package:ac_students/core/utils/widgets/auth_button.dart';
+import 'package:ac_students/core/utils/widgets/custom_logo.dart';
+import 'package:ac_students/core/utils/widgets/custom_text_fields.dart';
+import 'package:ac_students/features/auth/login/widgets/login_fields.dart';
 import 'package:ac_students/features/auth/providers/user_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -15,9 +16,6 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  TextEditingController emailController = TextEditingController();
-  TextEditingController passwordController = TextEditingController();
-
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -75,37 +73,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          SizedBox(
-                            height: size.height * 0.08,
-                          ),
-                          CustomTextField(
-                            control: emailController,
-                            hntText: lan.get('Email'),
-                          ),
-                          SizedBox(
-                            height: size.height * 0.02,
-                          ),
-                          CustomTextField(
-                            control: passwordController,
-                            hntText: lan.get('Password'),
-                            type: inputType.password,
-                          ),
-                          SizedBox(
-                            height: size.height * 0.04,
-                          ),
-                          AuthButton(
-                              onPress: () {
-                                user.doUserLogin(
-                                    // usernameController,
-                                    emailController,
-                                    passwordController,
-                                    user.selectedIndex ?? 1,
-                                    context);
-                              },
-                              label: lan.get('Login').toString()),
-                          SizedBox(
-                            height: size.height * 0.02,
-                          ),
+                          const LoginFields(),
                           Container(
                             width: size.width,
                             // height: size.height * 0.08,

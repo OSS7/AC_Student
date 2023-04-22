@@ -1,11 +1,11 @@
 import 'package:ac_students/core/constant/constant.dart';
-import 'package:ac_students/core/providers/language_provider.dart';
-import 'package:ac_students/core/widgets/app_bar.dart';
+import 'package:ac_students/core/utils/providers/language_provider.dart';
+import 'package:ac_students/core/utils/widgets/app_bar.dart';
 import 'package:ac_students/features/drawer/drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../../../core/widgets/logo_container.dart';
+import '../../../core/utils/widgets/logo_container.dart';
 import 'widgets/files_delete_widget.dart';
 import 'widgets/images_delete_widget.dart';
 import 'widgets/marks_delete_widget.dart';
@@ -21,7 +21,7 @@ class DeleteScreen extends StatefulWidget {
 class _DeleteScreenState extends State<DeleteScreen> {
   @override
   Widget build(BuildContext context) {
-    final lan = Provider.of<LanguageProvider>(context, listen: true);
+    final lan = Provider.of<LanguageProvider>(context );
 
     return Directionality(
       textDirection: lan.isAr ? TextDirection.rtl : TextDirection.ltr,

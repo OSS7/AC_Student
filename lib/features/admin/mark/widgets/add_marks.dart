@@ -1,6 +1,6 @@
 import 'package:ac_students/core/constant/constant.dart';
-import 'package:ac_students/core/providers/admin_provider.dart';
-import 'package:ac_students/features/user/mark/providers/marks_provider.dart';
+import 'package:ac_students/core/utils/providers/admin_provider.dart';
+import 'package:ac_students/features/student/mark/providers/marks_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

@@ -1,4 +1,4 @@
-import 'package:ac_students/core/providers/language_provider.dart';
+import 'package:ac_students/core/utils/providers/language_provider.dart';
 import 'package:ac_students/features/auth/providers/user_provider.dart';
 import 'package:ac_students/features/auth/sign_up/widgets/year_txt.dart';
 import 'package:flutter/material.dart';

@@ -1,13 +1,13 @@
 import 'package:ac_students/core/constant/constant.dart';
-import 'package:ac_students/core/providers/language_provider.dart';
-import 'package:ac_students/core/widgets/app_bar.dart';
-import 'package:ac_students/core/widgets/custom_text_fields.dart';
+import 'package:ac_students/core/utils/providers/language_provider.dart';
+import 'package:ac_students/core/utils/widgets/app_bar.dart';
+import 'package:ac_students/core/utils/widgets/custom_text_fields.dart';
 import 'package:ac_students/features/drawer/drawer.dart';
-import 'package:ac_students/features/user/news/providers/news_provider.dart';
+import 'package:ac_students/features/student/news/providers/news_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../../../core/widgets/logo_container.dart';
+import '../../../core/utils/widgets/logo_container.dart';
 
 class AddNewsScreen extends StatefulWidget {
   const AddNewsScreen({Key? key}) : super(key: key);
@@ -25,7 +25,7 @@ class _AddNewsScreenState extends State<AddNewsScreen> {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
-    final newsProvider = Provider.of<NewsesProvider>(context, listen: true);
+    final newsProvider = Provider.of<NewsesProvider>(context);
     final lan = Provider.of<LanguageProvider>(context, listen: false);
 
     return Directionality(

@@ -1,7 +1,7 @@
 import 'package:ac_students/core/constant/constant.dart';
-import 'package:ac_students/core/providers/language_provider.dart';
-import 'package:ac_students/core/widgets/auth_button.dart';
-import 'package:ac_students/core/widgets/custom_text_fields.dart';
+import 'package:ac_students/core/utils/providers/language_provider.dart';
+import 'package:ac_students/core/utils/widgets/auth_button.dart';
+import 'package:ac_students/core/utils/widgets/custom_text_fields.dart';
 import 'package:ac_students/features/auth/providers/user_provider.dart';
 import 'package:ac_students/features/auth/sign_up/widgets/choose_picture.dart';
 import 'package:ac_students/features/auth/sign_up/widgets/dep_row.dart';

@@ -1,9 +1,9 @@
 import 'package:ac_students/core/constant/constant.dart';
-import 'package:ac_students/core/providers/language_provider.dart';
-import 'package:ac_students/core/widgets/loading_circle.dart';
-import 'package:ac_students/features/user/file/providers/files_provider.dart';
-import 'package:ac_students/features/user/file/widgets/file_item.dart';
-import 'package:ac_students/features/user/subject/subjects/providers/subjects_provider.dart';
+import 'package:ac_students/core/utils/providers/language_provider.dart';
+import 'package:ac_students/core/utils/widgets/loading_circle.dart';
+import 'package:ac_students/features/student/file/providers/files_provider.dart';
+import 'package:ac_students/features/student/file/widgets/file_item.dart';
+import 'package:ac_students/features/student/subject/subjects/providers/subjects_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

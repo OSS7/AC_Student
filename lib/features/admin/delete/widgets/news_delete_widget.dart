@@ -1,5 +1,5 @@
 import 'package:ac_students/core/constant/constant.dart';
-import 'package:ac_students/features/user/news/providers/news_provider.dart';
+import 'package:ac_students/features/student/news/providers/news_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -8,7 +8,7 @@ class NewsDeleteWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final newsProvider = Provider.of<NewsesProvider>(context, listen: true);
+    final newsProvider = Provider.of<NewsesProvider>(context);
     final size = MediaQuery.of(context).size;
 
     return Padding(

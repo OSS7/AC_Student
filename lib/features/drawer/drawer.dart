@@ -1,6 +1,6 @@
 import 'package:ac_students/core/constant/categories.dart';
-import 'package:ac_students/core/providers/language_provider.dart';
-import 'package:ac_students/core/widgets/custom_logo.dart';
+import 'package:ac_students/core/utils/providers/language_provider.dart';
+import 'package:ac_students/core/utils/widgets/custom_logo.dart';
 import 'package:ac_students/features/auth/providers/user_provider.dart';
 import 'package:ac_students/features/drawer/model/drawer_model.dart';
 import 'package:ac_students/features/drawer/widgets/drawer_item.dart';

@@ -1,12 +1,12 @@
 import 'package:ac_students/core/constant/constant.dart';
-import 'package:ac_students/core/providers/language_provider.dart';
-import 'package:ac_students/core/widgets/app_bar.dart';
+import 'package:ac_students/core/utils/providers/language_provider.dart';
+import 'package:ac_students/core/utils/widgets/app_bar.dart';
 import 'package:ac_students/features/drawer/drawer.dart';
-import 'package:ac_students/features/user/report/providers/reports_provider.dart';
+import 'package:ac_students/features/student/report/providers/reports_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../../../core/widgets/logo_container.dart';
+import '../../../core/utils/widgets/logo_container.dart';
 
 class ReportsListScreen extends StatelessWidget {
   const ReportsListScreen({Key? key}) : super(key: key);

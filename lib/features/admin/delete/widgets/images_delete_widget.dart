@@ -1,5 +1,5 @@
 import 'package:ac_students/core/constant/constant.dart';
-import 'package:ac_students/features/user/images/image/providers/images_provider.dart';
+import 'package:ac_students/features/student/images/image/providers/images_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -8,7 +8,7 @@ class PhotoDeleteWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final photoProvider = Provider.of<ImagesProvider>(context, listen: true);
+    final photoProvider = Provider.of<ImagesProvider>(context );
     final size = MediaQuery.of(context).size;
 
     return Padding(

@@ -1,12 +1,12 @@
 import 'dart:io';
 
 import 'package:ac_students/core/constant/constant.dart';
-import 'package:ac_students/core/providers/language_provider.dart';
-import 'package:ac_students/core/widgets/app_bar.dart';
-import 'package:ac_students/core/widgets/custom_text_fields.dart';
-import 'package:ac_students/core/widgets/logo_container.dart';
+import 'package:ac_students/core/utils/providers/language_provider.dart';
+import 'package:ac_students/core/utils/widgets/app_bar.dart';
+import 'package:ac_students/core/utils/widgets/custom_text_fields.dart';
+import 'package:ac_students/core/utils/widgets/logo_container.dart';
 import 'package:ac_students/features/drawer/drawer.dart';
-import 'package:ac_students/features/user/images/image/providers/images_provider.dart';
+import 'package:ac_students/features/student/images/image/providers/images_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
@@ -25,7 +25,7 @@ class _AddPhotoScreenState extends State<AddPhotoScreen> {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
-    final imageProvider = Provider.of<ImagesProvider>(context, listen: true);
+    final imageProvider = Provider.of<ImagesProvider>(context);
     final lan = Provider.of<LanguageProvider>(context, listen: false);
 
     return Directionality(
@@ -47,7 +47,7 @@ class _AddPhotoScreenState extends State<AddPhotoScreen> {
                 Expanded(
                   child: SingleChildScrollView(
                     child: Container(
-                      padding: EdgeInsets.only(top: 40),
+                      padding: const EdgeInsets.only(top: 40),
                       decoration: BoxDecoration(
                         color: primaryClr,
                       ),
@@ -62,12 +62,13 @@ class _AddPhotoScreenState extends State<AddPhotoScreen> {
                             hntText: 'Photo title',
                             maxLength: 2,
                           ),
-                          imageFile != null
-                              ? SizedBox(
-                                  width: size.width * 0.6,
-                                  height: size.height * 0.3,
-                                  child: Image.file(File(imageFile!.path)))
-                              : const SizedBox(),
+                          Visibility(
+                            visible: imageFile != null,
+                            child: SizedBox(
+                                width: size.width * 0.6,
+                                height: size.height * 0.3,
+                                child: Image.file(File(imageFile!.path))),
+                          ),
                           TextButton(
                             onPressed: () async {
                               final ImagePicker _picker = ImagePicker();
@@ -83,7 +84,7 @@ class _AddPhotoScreenState extends State<AddPhotoScreen> {
                               });
                             },
                             child: Container(
-                              margin: EdgeInsets.all(5),
+                              margin: const EdgeInsets.all(5),
                               width: 140,
                               height: 50,
                               decoration: BoxDecoration(
@@ -103,7 +104,10 @@ class _AddPhotoScreenState extends State<AddPhotoScreen> {
                           TextButton(
                             onPressed: () async {
                               imageProvider.addImage(
-                                  context, _title.text, File(imageFile!.path));
+                                context,
+                                _title.text,
+                                File(imageFile!.path),
+                              );
                             },
                             child: Container(
                               width: 140,

@@ -1,5 +1,5 @@
 import 'package:ac_students/core/constant/constant.dart';
-import 'package:ac_students/features/user/file/providers/files_provider.dart';
+import 'package:ac_students/features/student/file/providers/files_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -8,7 +8,7 @@ class FilesDeleteWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final filesProvider = Provider.of<FilesProvider>(context, listen: true);
+    final filesProvider = Provider.of<FilesProvider>(context );
     final size = MediaQuery.of(context).size;
 
     return Padding(

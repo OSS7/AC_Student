@@ -1,6 +1,6 @@
 import 'package:ac_students/core/constant/constant.dart';
-import 'package:ac_students/features/user/mark/providers/marks_provider.dart';
-import 'package:ac_students/features/user/subject/subjects/providers/subjects_provider.dart';
+import 'package:ac_students/features/student/mark/providers/marks_provider.dart';
+import 'package:ac_students/features/student/subject/subjects/providers/subjects_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -9,10 +9,10 @@ class MarksDeleteWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final marksProvider = Provider.of<MarksProvider>(context, listen: true);
+    final marksProvider = Provider.of<MarksProvider>(context );
     final size = MediaQuery.of(context).size;
     final subjectProvider =
-        Provider.of<SubjectsProvider>(context, listen: true);
+        Provider.of<SubjectsProvider>(context );
 
     return Padding(
       padding: const EdgeInsets.only(bottom: 30),

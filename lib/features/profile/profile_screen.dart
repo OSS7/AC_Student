@@ -1,6 +1,6 @@
 import 'package:ac_students/core/constant/constant.dart';
-import 'package:ac_students/core/providers/language_provider.dart';
-import 'package:ac_students/core/widgets/app_bar.dart';
+import 'package:ac_students/core/utils/providers/language_provider.dart';
+import 'package:ac_students/core/utils/widgets/app_bar.dart';
 import 'package:ac_students/features/auth/providers/user_provider.dart';
 import 'package:ac_students/features/drawer/drawer.dart';
 import 'package:ac_students/features/drawer/widgets/logout_button.dart';
@@ -34,7 +34,7 @@ class _ProfileScreenState extends State<ProfileScreen>
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
-    final userProvider = Provider.of<UserProvider>(context, listen: true);
+    final userProvider = Provider.of<UserProvider>(context);
     final lan = Provider.of<LanguageProvider>(context);
     return Directionality(
       textDirection: lan.isAr ? TextDirection.rtl : TextDirection.ltr,

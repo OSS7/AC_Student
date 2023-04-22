@@ -1,15 +1,16 @@
 import 'package:ac_students/core/constant/constant.dart';
-import 'package:ac_students/core/providers/language_provider.dart';
-import 'package:ac_students/core/widgets/app_bar.dart';
-import 'package:ac_students/core/widgets/custom_text_fields.dart';
+import 'package:ac_students/core/utils/providers/language_provider.dart';
+import 'package:ac_students/core/utils/widgets/app_bar.dart';
+import 'package:ac_students/core/utils/widgets/custom_text_fields.dart';
+import 'package:ac_students/features/admin/file/widgets/add_file_department_row.dart';
 import 'package:ac_students/features/drawer/drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../../../core/providers/admin_provider.dart';
-import '../../../core/widgets/departments_row.dart';
-import '../../../core/widgets/logo_container.dart';
-import '../../../core/widgets/subjects_list.dart';
+import '../../../core/utils/providers/admin_provider.dart';
+import '../../../core/utils/widgets/departments_row.dart';
+import '../../../core/utils/widgets/logo_container.dart';
+import '../../../core/utils/widgets/subjects_list.dart';
 import 'widgets/add_file_button.dart';
 
 class AddFileScreen extends StatefulWidget {
@@ -71,19 +72,7 @@ class _AddFileScreenState extends State<AddFileScreen> {
                         hntText: 'File drive link',
                         maxLength: 4,
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 20),
-                        child: SizedBox(
-                          width: size.width * 0.9,
-                          height: size.height * 0.05,
-                          child: ListView.builder(
-                              itemCount: 2,
-                              scrollDirection: Axis.horizontal,
-                              itemBuilder: (ctx, index) {
-                                return DepartmentRow(index: index);
-                              }),
-                        ),
-                      ),
+                      const AddFileDepartmentRow(),
                       Container(
                         margin: edge20,
                         width: size.width,

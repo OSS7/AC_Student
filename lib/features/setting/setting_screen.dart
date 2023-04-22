@@ -1,7 +1,7 @@
 import 'package:ac_students/core/constant/constant.dart';
-import 'package:ac_students/core/providers/language_provider.dart';
-import 'package:ac_students/core/providers/providers_data.dart';
-import 'package:ac_students/core/widgets/app_bar.dart';
+import 'package:ac_students/core/utils/providers/language_provider.dart';
+import 'package:ac_students/core/utils/providers/providers_data.dart';
+import 'package:ac_students/core/utils/widgets/app_bar.dart';
 import 'package:ac_students/features/auth/providers/user_provider.dart';
 import 'package:ac_students/features/drawer/drawer.dart';
 import 'package:ac_students/features/setting/widgets/setting_switch_tile.dart';
@@ -59,8 +59,8 @@ class _SettingScreenState extends State<SettingScreen>
     final box = GetStorage();
     final size = MediaQuery.of(context).size;
     final lan = Provider.of<LanguageProvider>(context);
-    final provider = Provider.of<ProvidersData>(context, listen: true);
-    final userProvider = Provider.of<UserProvider>(context, listen: true);
+    final provider = Provider.of<ProvidersData>(context);
+    final userProvider = Provider.of<UserProvider>(context);
     bool? arg = (ModalRoute.of(context)!.settings.arguments ?? false) as bool?;
     List<int> colors = box.read('mode') ?? false ? colorsDark : colorsLight;
 

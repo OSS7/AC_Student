@@ -1,9 +1,9 @@
 import 'package:ac_students/core/constant/constant.dart';
-import 'package:ac_students/core/providers/language_provider.dart';
-import 'package:ac_students/core/widgets/loading_circle.dart';
+import 'package:ac_students/core/utils/providers/language_provider.dart';
+import 'package:ac_students/core/utils/widgets/loading_circle.dart';
 import 'package:ac_students/features/auth/providers/user_provider.dart';
-import 'package:ac_students/features/user/subject/subjects/providers/subjects_provider.dart';
-import 'package:ac_students/features/user/subject/subjects/widgets/subject_item.dart';
+import 'package:ac_students/features/student/subject/subjects/providers/subjects_provider.dart';
+import 'package:ac_students/features/student/subject/subjects/widgets/subject_item.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -19,7 +19,7 @@ class _HomeSubjectsWidgetState extends State<HomeSubjectsWidget> {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     final subjectsProvider =
-        Provider.of<SubjectsProvider>(context, listen: true);
+        Provider.of<SubjectsProvider>(context );
     final lan = Provider.of<LanguageProvider>(context);
     final usr = Provider.of<UserProvider>(context);
 
